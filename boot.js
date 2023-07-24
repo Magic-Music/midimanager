@@ -52,5 +52,7 @@ const midi = require('./midi/midiApi')
 contextBridge.exposeInMainWorld('midiApi', {
     getPorts: () => midi.getPorts(),
     sendSongById: (projectSlug, programData) => midi. sendSongById(projectSlug, programData),
-    sendSongToMidi: (projectSlug, programData) => midi.sendSongToMidi(projectSlug, programData)
+    sendSongToMidi: (projectSlug, programData) => midi.sendSongToMidi(projectSlug, programData),
+    connectMidiThru: (projectSlug) => midi.connectMidiThru(projectSlug),
+    disconnectMidiThru: () => midi.disconnectMidiThru()
 })

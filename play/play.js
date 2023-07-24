@@ -56,6 +56,8 @@ function showSet() {
     allSongsTable.on('rowClick', function(e, row) {
         window.midiApi.sendSongById(projectSlug, row.getData().songId)
     })
+
+    connectMidiThru()
 }
 
 function transmit(songId) {

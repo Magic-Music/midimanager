@@ -3,7 +3,10 @@ const {getBankDataBySlug} = require("../devices/devicesApi");
 const {getDeviceChannels, getCurrentPort} = require("../projects/projectsApi");
 const {getPrograms} = require("../songs/songsApi");
 
+let midiIn
 let midiOut
+let midiThru
+
 let lastProjectSlug
 let channels
 let ports
@@ -62,8 +65,53 @@ const getMidiOut = (projectSlug) => {
     return midiOut
 }
 
+const getMidiIn = (projectSlug) => {
+    if (!midiIn && projectSlug) {
+        let port = getCurrentPort(projectSlug)
+        midiIn = jzz().openMidiIn(port).or(function() {})
+    }
+
+    return midiIn
+}
+
+const connectMidiThru = (projectSlug) => {
+    if (!projectSlug) {
+        return
+    }
+
+    let midiIn = getMidiIn(projectSlug)
+    let midiOut = getMidiOut(projectSlug)
+
+    if (!midiThru && midiIn && midiOut) {
+        midiThru = jzz().Widget({
+            _receive: function(msg) {
+                if (msg[0] !== 254) { //Filter active sensing messages
+                    this.emit(msg)
+                }
+            }
+        })
+
+        midiIn.connect(midiThru)
+        midiThru.connect(midiOut)
+    }
+}
+
+const disconnectMidiThru = () => {
+    disconnect(midiThru)
+    disconnect(midiOut)
+    disconnect(midiIn)
+}
+
+const disconnect = (connection) => {
+    if (typeof(connection) !== 'undefined') {
+        connection.disconnect().close()
+    }
+}
+
 module.exports = {
     getPorts,
     sendSongById,
-    sendSongToMidi
+    sendSongToMidi,
+    connectMidiThru,
+    disconnectMidiThru
 }

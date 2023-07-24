@@ -3,8 +3,6 @@ const path = require('path')
 
 const createWindow = () => {
     const win = new BrowserWindow({
-        // height:1200,
-        // width:1920,
         kiosk: true,
         fullscreen:true,
         webPreferences: {
@@ -18,7 +16,7 @@ const createWindow = () => {
     win.loadFile('home/home.html')
     win.setMenu(null)
     
-    //Developer Tools
+    //Uncomment to show developer tools
     //win.webContents.openDevTools()
 }
 
