@@ -9,6 +9,10 @@ String.prototype.slugify = function (separator = "-") {
         .replace(/\s+/g, separator);
 };
 
+function connectMidiThru() {
+    window.midiApi.connectMidiThru(getQueryParam('project'))
+}
+
 function el(id) {
     return document.getElementById(id)
 }
@@ -41,7 +45,9 @@ function getQueryParam(key) {
 }
 
 function redirect(url, queryParams = null) {
+    window.midiApi.disconnectMidiThru()
     params = queryParams ? '?' + new URLSearchParams(queryParams).toString() : ''
+
     window.location = url + params
 }
 
