@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000"
+     height="1000" viewBox="0 0 1000 1000">
+    <desc>Created with Fabric.js 3.5.0</desc>
+    <defs>
+    </defs>
+    <g transform="matrix(1.6602 0 0 1.6602 498.834 498.834)" id="175646">
+        <g style="" vector-effect="non-scaling-stroke">
+            <g transform="matrix(6.5 0 0 6.5 0 0)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 4; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(255,255,255); fill-opacity: 0; fill-rule: nonzero; opacity: 1;"
+                        vector-effect="non-scaling-stroke" cx="0" cy="0" r="40"/>
+            </g>
+
+            <g transform="matrix(0.94 0 0 0.94 -149.7 3.3)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;"
+                        cx="0" cy="0" r="40"/>
+            </g>
+            <g transform="matrix(0.94 0 0 0.94 -101.7 -97.7)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;"
+                        cx="0" cy="0" r="40"/>
+            </g>
+            <g transform="matrix(0.94 0 0 0.94 3.3 -151.7)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;"
+                        cx="0" cy="0" r="40"/>
+            </g>
+            <g transform="matrix(0.94 0 0 0.94 112.3 -97.7)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;"
+                        cx="0" cy="0" r="40"/>
+            </g>
+            <g transform="matrix(0.94 0 0 0.94 158.3 3.3)">
+                <circle style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;"
+                        cx="0" cy="0" r="40"/>
+            </g>
+        </g>
+    </g>
+</svg>

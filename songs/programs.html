@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Programs - MidiManager</title>
+    <link rel="stylesheet" type="text/css" href="tabulator/tabulator_midnight.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="outer-container">
+    <h1 id='header'></h1>
+    <h3>Song Program Data</h3>
+    <div class="button-bar button-bar-right">
+        <button class="button red-button button-invisible" id="save-programs">Save Program Data</button>
+        <button class="button blue-button" id="add-device">Add Device</button>
+        <button class="button blue-button" id="back-to-songs">Back to songs</button>
+        <button class="button blue-button" id="home"><strong>HOME</strong></button>
+    </div>
+    <div id="programs-table"></div>
+</div>
+
+<script src="tabulator/tabulator.js"></script>
+<script src="script.js"></script>
+<script src="songs/programs.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+[
+ {
+  "name": "Regener8",
+  "slug": "regener8",
+  "devices": [
+   {
+    "deviceSlug": "roland-jupiter-x",
+    "midiChannel": 1
+   },
+   {
+    "deviceSlug": "korg-triton-studio",
+    "midiChannel": 2
+   },
+   {
+    "deviceSlug": "yamaha-cs1x",
+    "midiChannel": 3
+   },
+   {
+    "deviceSlug": "moog-voyager",
+    "midiChannel": 8
+   },
+   {
+    "deviceSlug": "korg-oasis",
+    "midiChannel": 7
+   },
+   {
+    "deviceSlug": "korg-prophecy",
+    "midiChannel": 4
+   }
+  ],
+  "lastSongId": 20,
+  "songs": [
+   {
+    "songId": "1",
+    "title": "Tainted Love",
+    "artist": "Soft Cell",
+    "info": "This is soft cell\nIt's about a cell\n\nThat is soft :P\n",
+    "programs": [
+     {
+      "device": "yamaha-cs1x",
+      "bank": "-",
+      "program": "54"
+     }
+    ]
+   },
+   {
+    "songId": "2",
+    "title": "Drive",
+    "artist": "The Arse",
+    "programs": [
+     {
+      "device": "korg-oasis",
+      "bank": "-",
+      "program": "65"
+     }
+    ]
+   },
+   {
+    "songId": "7",
+    "title": "Womp",
+    "artist": "Rat"
+   },
+   {
+    "songId": "8",
+    "title": "Jog",
+    "artist": "On"
+   },
+   {
+    "songId": "9",
+    "title": "Wish Bone",
+    "artist": "Log"
+   },
+   {
+    "songId": "11",
+    "title": "Goose",
+    "artist": "Bomb"
+   },
+   {
+    "songId": "12",
+    "title": "Do not",
+    "artist": "Touch"
+   },
+   {
+    "songId": "13",
+    "title": "fish",
+    "artist": "heads"
+   },
+   {
+    "songId": "14",
+    "title": "Moose",
+    "artist": "Rammage"
+   },
+   {
+    "songId": "15",
+    "title": "Whirly Gig Yak Attack",
+    "artist": "Fish bone tone phne"
+   },
+   {
+    "songId": "16",
+    "title": "Turtle Neck",
+    "artist": "Fish cake"
+   },
+   {
+    "songId": "17",
+    "title": "Whack",
+    "artist": "A doodle"
+   },
+   {
+    "songId": "18",
+    "title": "Mole",
+    "artist": "Role"
+   },
+   {
+    "songId": "19",
+    "title": "Trump",
+    "artist": "Sock"
+   },
+   {
+    "songId": "20",
+    "title": "dump",
+    "artist": "Hole"
+   }
+  ],
+  "sets": [
+   {
+    "name": "80s 45 Min Set One ",
+    "slug": "80s-45-min-set-one",
+    "songs": [
+     "9",
+     "11",
+     "7",
+     "8",
+     "11",
+     "1"
+    ]
+   },
+   {
+    "name": "80s 45 Min Set Two",
+    "slug": "80s-45-min-set-two",
+    "songs": [
+     "12",
+     "9",
+     "2"
+    ]
+   }
+  ],
+  "midiPort": "USB Midi 4i4o MIDI 1"
+ },
+ {
+  "name": "Rubix Cube",
+  "slug": "rubix-cube",
+  "devices": [
+   {
+    "deviceSlug": "yamaha-cs1x",
+    "midiChannel": 7
+   }
+  ],
+  "lastSongId": 1,
+  "songs": [
+   {
+    "songId": "1",
+    "title": "Just",
+    "artist": "Can't Get"
+   }
+  ],
+  "midiPort": "MIDIOUT4 (USB Midi 4i4o)"
+ }
+]

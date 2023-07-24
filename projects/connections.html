@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Project connections - MidiManager</title>
+    <link rel="stylesheet" type="text/css" href="tabulator/tabulator_midnight.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="outer-container">
+    <h1 id='header'></h1>
+    <h3>Project connections</h3>
+    <div class="button-bar button-bar-right">
+        <button class="button red-button button-invisible" id="save-connections">Save Connections</button>
+        <button class="button blue-button" id="select-port">MIDI Port</button>
+        <button class="button blue-button" id="add-connection">Add Connection</button>
+        <button class="button blue-button" id="return-to-projects">Return to Projects</button>
+        <button class="button blue-button" id="home"><strong>HOME</strong></button>
+    </div>
+    <div id="connections-table"></div>
+</div>
+
+<script src="tabulator/tabulator.js"></script>
+<script src="script.js"></script>
+<script src="projects/connections.js"></script>
+</body>
+</html>

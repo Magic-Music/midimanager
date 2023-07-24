@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>MidiManager</title>
+    <link rel="stylesheet" type="text/css" href="tabulator/tabulator_midnight.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="full-container">
+    <div class="header-container">
+        <div class="button-right">
+            <button class="button blue-button" id="extra-song" ><strong>Extra Song</strong></button>
+        </div>
+        <div class="play-header">
+            <div id='set-name'></div>
+        </div>
+        <div class="button-right">
+            <button class="button blue-button" id="back"><strong>GO BACK</strong></button>
+        </div>
+    </div>
+    <div class="body-container">
+        <div id="setlist" class="setlist-container"></div>
+        <div class="info-container">
+            <div id="song-info" class="song-info">
+                <div class="pre-show">Enjoy the show!</div>
+            </div>
+            <div class="control-bar">
+                <button id="next-song" class="next-song-button">START SET!</button>
+                <button id="end-set" class="next-song-button red-button button-hidden">EXIT SET</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-background" class="modal-background modal-hidden">
+        <div class="modal">
+            <div class="modal-header">Click a song to transmit</div>
+            <div class = "all-songs-table" id="all-songs-table"></div>
+            <button id="close" class="info-button">CLOSE</button>
+        </div>
+    </div>
+</div>
+
+<script src="tabulator/tabulator.js"></script>
+<script src="script.js"></script>
+<script src="play/play.js"></script>
+</body>
+</html>

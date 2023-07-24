@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Songs - MidiManager</title>
+    <link rel="stylesheet" type="text/css" href="tabulator/tabulator_midnight.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="outer-container">
+    <h1 id='header'></h1>
+    <h3>Songs</h3>
+    <div class="button-bar button-bar-right">
+        <button class="button red-button button-invisible" id="save-songs">Save Songs</button>
+        <button class="button blue-button" id="add-song">Add Song</button>
+        <button class="button blue-button" id="back">Back</button>
+        <button class="button blue-button" id="home"><strong>HOME</strong></button>
+    </div>
+    <div class="song-table-container">
+        <div id="songs-table"></div>
+    </div>
+</div>
+<div id="modal-background" class="modal-background modal-hidden">
+    <div class="modal">
+        <div class="modal-header">Song information</div>
+        <textarea id='info' class="modal-textarea"></textarea>
+        <button id="info-ok" class="info-button">Save</button>
+        <button id="info-cancel" class="info-button">Cancel</button>
+    </div>
+</div>
+
+<script src="tabulator/tabulator.js"></script>
+<script src="script.js"></script>
+<script src="songs/songs.js"></script>
+</body>
+</html>

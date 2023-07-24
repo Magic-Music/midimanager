@@ -1,0 +1,665 @@
+[
+ {
+  "name": "Regener8",
+  "slug": "regener8",
+  "midiPort": "USB MIDI Interface MIDI 1",
+  "devices": [
+   {
+    "deviceSlug": "korg-triton-studio",
+    "midiChannel": 15
+   },
+   {
+    "deviceSlug": "roland-jupiter-x",
+    "midiChannel": 16
+   },
+   {
+    "deviceSlug": "yamaha-mo6",
+    "midiChannel": 1
+   },
+   {
+    "deviceSlug": "korg-prologue-16",
+    "midiChannel": 2
+   },
+   {
+    "deviceSlug": "studiologic-sledge",
+    "midiChannel": 3
+   },
+   {
+    "deviceSlug": "yamaha-cs1x",
+    "midiChannel": 4
+   }
+  ],
+  "songs": [
+   {
+    "songId": "1",
+    "title": "Don't You Forget About Me",
+    "artist": "Simple Minds",
+    "info": "Starts Dm -> Em",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "0"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "5"
+     }
+    ]
+   },
+   {
+    "songId": "2",
+    "title": "I Just Died In Your Arms",
+    "artist": "Cutting Crew",
+    "info": "Bm chord. Cello in LH on F#",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "15"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "1"
+     }
+    ]
+   },
+   {
+    "songId": "3",
+    "title": "Everybody Wants To Rule The World",
+    "artist": "Tears For Fears",
+    "info": "CS1 Descending Arpeggio starting on high D. LH dulcimer on F#\n\nMiddle held A under display",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "2"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "3"
+     }
+    ]
+   },
+   {
+    "songId": "4",
+    "title": "Rio",
+    "artist": "Duran Duran",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "4"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "4"
+     }
+    ]
+   },
+   {
+    "songId": "5",
+    "title": "Cut A Long Story Short",
+    "artist": "Spandau Ballet",
+    "info": "Instrumental - 4 times first time, 2 times second time\n",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "1"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "6"
+     }
+    ]
+   },
+   {
+    "songId": "6",
+    "title": "Gold",
+    "artist": "Spandau Ballet",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "21"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-86",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "7",
+    "title": "Somewhere In My Heart",
+    "artist": "Aztec Camera",
+    "info": "A  A - G-----\nG  F------\nC Major",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "28"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "8"
+     }
+    ]
+   },
+   {
+    "songId": "8",
+    "title": "Together In Electric Dreams",
+    "artist": "Oakey / Moroder",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "5"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "3"
+     }
+    ]
+   },
+   {
+    "songId": "9",
+    "title": "Summer Of 69",
+    "artist": "Bryan Adams",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "7"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-86",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "10",
+    "title": "Woiuldn't It Be Good",
+    "artist": "Nick Kirshaw",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "3"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "10"
+     }
+    ]
+   },
+   {
+    "songId": "11",
+    "title": "It's My Life",
+    "artist": "Talk Talk",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "8"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "6"
+     }
+    ]
+   },
+   {
+    "songId": "12",
+    "title": "The Look Of Love",
+    "artist": "ABC",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "17"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "12"
+     }
+    ]
+   },
+   {
+    "songId": "13",
+    "title": "The Sun Always Shines On TV",
+    "artist": "A-Ha",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "26"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "13"
+     }
+    ]
+   },
+   {
+    "songId": "14",
+    "title": "Drive",
+    "artist": "The Cars",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "6"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "2"
+     }
+    ]
+   },
+   {
+    "songId": "15",
+    "title": "Power Of Love",
+    "artist": "Huey Lewis & The News",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "9"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "4"
+     }
+    ]
+   },
+   {
+    "songId": "16",
+    "title": "It's A Sin",
+    "artist": "Pet Shop Boys",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "10"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "8"
+     }
+    ]
+   },
+   {
+    "songId": "17",
+    "title": "Top Gun Anthem",
+    "artist": "Harold Faltermayer",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "11"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "11"
+     }
+    ]
+   },
+   {
+    "songId": "18",
+    "title": "Danger Zone",
+    "artist": "Kenny Loggins",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "12"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "12"
+     }
+    ]
+   },
+   {
+    "songId": "19",
+    "title": "Sweet Dreams",
+    "artist": "Eurythmics",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "13"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "9"
+     }
+    ]
+   },
+   {
+    "songId": "20",
+    "title": "Karma Chameleon",
+    "artist": "Culture Club",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "25"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "8"
+     }
+    ]
+   },
+   {
+    "songId": "21",
+    "title": "Never Gonna Give You Up",
+    "artist": "Rick Astley",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "14"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "9"
+     }
+    ]
+   },
+   {
+    "songId": "22",
+    "title": "Rosanna",
+    "artist": "Toto",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "16"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "9"
+     }
+    ]
+   },
+   {
+    "songId": "23",
+    "title": "Don't You Want Me",
+    "artist": "Human League",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "18"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "15"
+     }
+    ]
+   },
+   {
+    "songId": "24",
+    "title": "Tainted Love",
+    "artist": "Soft Cell",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "19"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "5"
+     }
+    ]
+   },
+   {
+    "songId": "25",
+    "title": "Footloose",
+    "artist": "Kenny Loggins",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "20"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-8",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "26",
+    "title": "A Little Respect",
+    "artist": "Erasure",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "23"
+     }
+    ]
+   },
+   {
+    "songId": "27",
+    "title": "Addicted To Love",
+    "artist": "Robert Palmer",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "22"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-1",
+      "program": "1"
+     }
+    ]
+   },
+   {
+    "songId": "28",
+    "title": "Don't Dream It's Over",
+    "artist": "Crowded House",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "24"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-16",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "29",
+    "title": "Do They Know It's Xmas",
+    "artist": "Band Aid",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "29"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "13"
+     }
+    ]
+   },
+   {
+    "songId": "30",
+    "title": "Last Christmas",
+    "artist": "Wham",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "30"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-16",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "31",
+    "title": "Jump",
+    "artist": "Van Halen",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "34"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "14"
+     }
+    ]
+   },
+   {
+    "songId": "32",
+    "title": "Ghostbusters",
+    "artist": "Ray Parker Jr",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "31"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "15"
+     }
+    ]
+   },
+   {
+    "songId": "33",
+    "title": "Uptown Funk",
+    "artist": "Bruno Mars",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "32"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "16"
+     }
+    ]
+   },
+   {
+    "songId": "34",
+    "title": "Somebody To Love",
+    "artist": "Queen",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "38"
+     }
+    ]
+   }
+  ],
+  "lastSongId": 34,
+  "sets": [
+   {
+    "name": "80s 45 Min Set One",
+    "slug": "80s-45-min-set-one",
+    "songs": [
+     "1",
+     "5",
+     "3",
+     "10",
+     "4",
+     "8",
+     "11",
+     "28",
+     "15",
+     "13",
+     "16"
+    ]
+   },
+   {
+    "name": "80s 45 Min Set Two",
+    "slug": "80s-45-min-set-two",
+    "songs": [
+     "17",
+     "18",
+     "19",
+     "20",
+     "21",
+     "2",
+     "7",
+     "12",
+     "23",
+     "24",
+     "25",
+     "6",
+     "9",
+     "26",
+     "31",
+     "27"
+    ]
+   },
+   {
+    "name": "Showcase 80s 30 Min",
+    "slug": "showcase-80s-30-min",
+    "songs": [
+     "2",
+     "4",
+     "19",
+     "12",
+     "21",
+     "25",
+     "6",
+     "26",
+     "31"
+    ]
+   }
+  ]
+ }
+]

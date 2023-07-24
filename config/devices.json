@@ -1,0 +1,111 @@
+[
+ {
+  "name": "Korg Triton Studio",
+  "slug": "korg-triton-studio",
+  "banks": [
+   {
+    "bank": "EXT-D",
+    "slug": "extd",
+    "msb": "0",
+    "lsb": "11",
+    "offset": "0"
+   }
+  ]
+ },
+ {
+  "name": "Roland Jupiter X",
+  "slug": "roland-jupiter-x",
+  "banks": [
+   {
+    "bank": "Bank 8",
+    "slug": "bank-8",
+    "msb": "85",
+    "lsb": "0",
+    "offset": "111"
+   },
+   {
+    "bank": "Bank 9",
+    "slug": "bank-9",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "-1"
+   },
+   {
+    "bank": "Bank 10",
+    "slug": "bank-10",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "15"
+   },
+   {
+    "bank": "Bank 11",
+    "slug": "bank-11",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "31"
+   },
+   {
+    "bank": "Bank 12",
+    "slug": "bank-12",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "47"
+   },
+   {
+    "bank": "Bank 13",
+    "slug": "bank-13",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "63"
+   },
+   {
+    "bank": "Bank 14",
+    "slug": "bank-14",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "79"
+   },
+   {
+    "bank": "Bank 15",
+    "slug": "bank-15",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "95"
+   },
+   {
+    "bank": "Bank 16",
+    "slug": "bank-16",
+    "msb": "85",
+    "lsb": "1",
+    "offset": "111"
+   },
+   {
+    "bank": "Bank 1",
+    "slug": "bank-1",
+    "msb": "85",
+    "lsb": "0",
+    "offset": "-1"
+   }
+  ]
+ },
+ {
+  "name": "Yamaha MO6",
+  "slug": "yamaha-mo6",
+  "banks": []
+ },
+ {
+  "name": "Korg Prologue 16",
+  "slug": "korg-prologue-16",
+  "banks": []
+ },
+ {
+  "name": "Studiologic Sledge",
+  "slug": "studiologic-sledge",
+  "banks": []
+ },
+ {
+  "name": "Yamaha CS1x",
+  "slug": "yamaha-cs1x",
+  "banks": []
+ }
+]

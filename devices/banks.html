@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="../">
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Device Banks - MidiManager</title>
+    <link rel="stylesheet" type="text/css" href="tabulator/tabulator_midnight.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="outer-container">
+    <h1 id='header'></h1>
+    <h3>Device Banks</h3>
+    <div class="button-bar button-bar-right">
+        <button class="button red-button button-invisible" id="save-banks">Save Banks</button>
+        <button class="button blue-button" id="add-bank">Add new bank</button>
+        <button class="button blue-button" id="return-to-devices">Return to devices</button>
+        <button class="button blue-button" id="home"><strong>HOME</strong></button>
+    </div>
+    <div id="banks-table"></div>
+</div>
+
+<script src="tabulator/tabulator.js"></script>
+<script src="script.js"></script>
+<script src="devices/banks.js"></script>
+</body>
+</html>

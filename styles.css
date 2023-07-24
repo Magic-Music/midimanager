@@ -1,0 +1,346 @@
+html,body {
+    height:99%;
+}
+
+body {
+    display: inline-block;
+    background-color: #111122;
+    color: #eeeef2;
+    font-family: Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.tabulator {
+    font-size:26px;
+}
+
+.tabulator-row {
+    min-height: 56px;
+    vertical-align: middle;
+    line-height: 48px;
+}
+
+.tabulator-selected {
+    background-color: #ff6f1e !important;
+}
+
+.tabulator-tableholder {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.tabulator-tableholder:has(.tabulator-placeholder-contents) {
+    overflow: visible;
+    padding-bottom: 20px;
+}
+
+.tabulator-editing {
+    font-size: 34px !important;
+}
+
+.tabulator-edit-list-item {
+    font-size:36px;
+}
+
+.tabulator-row-handle-bar {
+    background: #0077dd !important;
+}
+
+.outer-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 1860px;
+    border: 2px outset;
+    text-align: center;
+    padding: 12px;
+    height: 98%;
+}
+
+.full-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 99vw;
+    border: 2px outset;
+    height: 98vh;
+    overflow: hidden;
+}
+
+.song-table-container {
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 240px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.project-container {
+    height: 84%;
+    overflow: auto;
+}
+
+.body-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.set-table {
+    display: inline-block;
+    width: 49%;
+    height: 67%;
+    overflow-x: hidden;
+}
+
+.setlist-container {
+    width: 50vw;
+    border-right: 2px solid #eeeeee;
+    height: 93%;
+    display: inline-block;
+    float: left;
+}
+
+.setlist-item {
+    text-align: left;
+    background-color: #1c3f64;
+    padding: 8px;
+    font-size: 36px;
+}
+
+.setlist-item:nth-child(even) {
+    background-color: #647199;
+}
+
+.info-container {
+    display: inline-block;
+    height: 80vh;
+    width: 42vw;
+}
+
+.song-info{
+    font-size: 50px;
+    text-align: left;
+    height: 100%;
+}
+
+.current-song {
+    background-color: #ff6f1e !important;
+}
+
+.control-bar {
+    text-align: center;
+    height: 160px;
+    line-height: 196px;
+    position: absolute;
+    bottom: 22px;
+    border-top: 1px solid #eeeeee;
+    width: 49vw;
+}
+
+.all-songs-table {
+    height: 75%;
+    margin: 8px 0px;
+}
+
+.next-song-button {
+    box-shadow:inset 0px 1px 0px 0px #7a8eb9;
+    background:linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+    background-color:#637aad;
+    border:1px solid #314179;
+    border-radius: 12px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size:50px;
+    font-weight:bold;
+    padding:40px 75px;
+    text-decoration:none;
+}
+.next-song-button:hover {
+     background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+     background-color:#5972a7;
+ }
+.next-song-button:active {
+     position:relative;
+     top:1px;
+ }
+
+.button-hidden {
+    display: none;
+}
+
+.button-bar {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    margin: 6px 0;
+    padding: 8px 0;
+    text-align: left;
+}
+
+.button-bar-right {
+    text-align: right;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    text-align: center;
+}
+
+.pre-show {
+    font-size: 130px;
+    font-weight: bold;
+    font-style: italic;
+    color: #d7c337;
+    background-color: #5c1320;
+    width: 49vw;
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 360px;
+}
+
+.play-header {
+    flex-grow: 2;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.button-right {
+    text-align: right;
+}
+
+.button {
+    border-radius:3px;
+    border:1px solid;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Verdana, sans-serif;
+    font-size:40px;
+    padding:16px 40px;
+    text-decoration:none;
+}
+
+.button:active {
+    position:relative;
+    top:1px;
+}
+
+.blue-button {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-color: #124d77;
+    text-shadow:0px 1px 0px #154682;
+}
+.blue-button:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
+
+.red-button {
+    box-shadow:inset 0px 1px 0px 0px #cf866c;
+    background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    background-color:#d0451b;
+    border-color:#942911;
+    text-shadow:0px 1px 0px #854629;
+}
+.red-button:hover {
+    background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+    background-color:#bc3315;
+}
+
+.button-invisible {
+    visibility: hidden;
+}
+
+.button-visible {
+    visibility: visible;
+}
+
+.big-button {
+    box-shadow: inset 0px 0px 0px 2px #9fb4f2;
+    background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    background-color: #7892c2;
+    border-radius: 10px;
+    border: 2px solid #4e6096;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    padding: 38px 0px;
+    text-decoration: none;
+    text-shadow: 5px 4px 11px #283966;
+    width: 800px;
+    margin: 20px;
+}
+.big-button:hover {
+     background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+     background-color:#476e9e;
+ }
+.big-button:active {
+     position:relative;
+     top:1px;
+}
+
+.set-button {
+    padding: 10px 0px;
+    font-size: 60px;
+    width: 90%;
+}
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(60, 60, 60, 0.8);
+    text-align: center;
+}
+
+.modal {
+    background-color: #aaaaaa;
+    border: 2px outset;
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header {
+    margin-top: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-textarea {
+    margin: 10px 0 7px;
+    width:95%;
+    height:75%;
+    font-size:32px;
+}
+
+.info-button {
+    padding: 18px 0;
+    width: 220px;
+    font-size: 30px;
+    background-color: #0072b2;
+    border: 1px outset #999999;
+}
+.info-button:hover {
+    border: inset;
+    background-color: #015785;
+}
+
+.modal-hidden {
+    display: none;
+}
