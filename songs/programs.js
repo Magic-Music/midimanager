@@ -2,7 +2,7 @@ let programsTable
 let bankSlugs
 let edited = false
 
-const projectSlug =getQueryParam('project')
+const projectSlug = getQueryParam('project')
 const songId = getQueryParam('song')
 
 //const devices = window.devicesApi.getDeviceSlugList()

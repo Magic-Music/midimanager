@@ -55,17 +55,13 @@ const getConnections = (projectSlug) => {
 
 const getUsedDeviceList = (projectSlug) => {
     let devices = getDevices()
-console.log("Full device list",devices)    
     let project = getProjectBySlug(projectSlug)
     let projectDevices = project['devices'] ?? [];
-console.log("Project devices",projectDevices)
     let usedDevices = {}
     projectDevices.forEach((device) => {
-console.log("Finding device", device)
         let deviceName = findBySlug(devices, device.deviceSlug).name       
         usedDevices[deviceName] = device.deviceSlug
     })
-console.log("Final list", usedDevices)
     return usedDevices
 }
 
@@ -100,7 +96,7 @@ const getNextSongId = (projectSlug) => {
 
 const getCurrentPort = (projectSlug) => {
     let project = getProjectBySlug(projectSlug)
-    return project['midiPort'] ?? ''
+    return (typeof project ==='undefined') ? '' : (project['midiPort'] ?? '')
 }
 
 const selectPort = (projectSlug, port) => {

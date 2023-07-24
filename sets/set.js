@@ -8,7 +8,6 @@ const songs = window.songsApi.getSongsConcat(projectSlug)
 let set = window.setsApi.getSet(projectSlug, setSlug)
 let setSongs = set.songs
 let setName = set.name
-console.log("SONGS",setSongs);
 
 window.onload = showSetSongs();
 
