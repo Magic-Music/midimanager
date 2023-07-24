@@ -3,9 +3,10 @@ const {getBankDataBySlug} = require("../devices/devicesApi");
 const {getDeviceChannels, getCurrentPort} = require("../projects/projectsApi");
 const {getPrograms} = require("../songs/songsApi");
 
-let midiOut
 let midiIn
+let midiOut
 let midiThru
+
 let lastProjectSlug
 let channels
 let ports

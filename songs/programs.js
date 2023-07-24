@@ -5,7 +5,6 @@ let edited = false
 const projectSlug = getQueryParam('project')
 const songId = getQueryParam('song')
 
-//const devices = window.devicesApi.getDeviceSlugList()
 const devices = window.projectsApi.getUsedDeviceList(projectSlug)
 const fullTitle = window.songsApi.getSongTitleAndArtist(projectSlug, songId)
 let programs = window.songsApi.getPrograms(projectSlug, songId)
