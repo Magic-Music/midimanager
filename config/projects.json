@@ -226,6 +226,7 @@
     "songId": "12",
     "title": "The Look Of Love",
     "artist": "ABC",
+    "info": "A Minor.\nBegins F G Am",
     "programs": [
      {
       "device": "korg-triton-studio",
