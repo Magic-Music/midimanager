@@ -6,27 +6,11 @@
   "devices": [
    {
     "deviceSlug": "korg-triton-studio",
-    "midiChannel": 15
+    "midiChannel": 1
    },
    {
     "deviceSlug": "roland-jupiter-x",
     "midiChannel": 16
-   },
-   {
-    "deviceSlug": "yamaha-mo6",
-    "midiChannel": 1
-   },
-   {
-    "deviceSlug": "korg-prologue-16",
-    "midiChannel": 2
-   },
-   {
-    "deviceSlug": "studiologic-sledge",
-    "midiChannel": 3
-   },
-   {
-    "deviceSlug": "yamaha-cs1x",
-    "midiChannel": 4
    }
   ],
   "songs": [
@@ -57,7 +41,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "15"
+      "program": "7"
      },
      {
       "device": "roland-jupiter-x",
@@ -75,7 +59,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "2"
+      "program": "1"
      },
      {
       "device": "roland-jupiter-x",
@@ -92,7 +76,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "4"
+      "program": "3"
      },
      {
       "device": "roland-jupiter-x",
@@ -110,7 +94,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "1"
+      "program": "28"
      },
      {
       "device": "roland-jupiter-x",
@@ -145,7 +129,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "28"
+      "program": "6"
      },
      {
       "device": "roland-jupiter-x",
@@ -179,7 +163,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "7"
+      "program": "22"
      },
      {
       "device": "roland-jupiter-x",
@@ -196,7 +180,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "3"
+      "program": "2"
      },
      {
       "device": "roland-jupiter-x",
@@ -213,7 +197,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "8"
+      "program": "39"
      },
      {
       "device": "roland-jupiter-x",
@@ -231,7 +215,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "17"
+      "program": "14"
      },
      {
       "device": "roland-jupiter-x",
@@ -248,7 +232,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "26"
+      "program": "24"
      },
      {
       "device": "roland-jupiter-x",
@@ -265,7 +249,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "6"
+      "program": "35"
      },
      {
       "device": "roland-jupiter-x",
@@ -282,7 +266,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "9"
+      "program": "8"
      },
      {
       "device": "roland-jupiter-x",
@@ -299,7 +283,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "10"
+      "program": "9"
      },
      {
       "device": "roland-jupiter-x",
@@ -350,7 +334,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "13"
+      "program": "4"
      },
      {
       "device": "roland-jupiter-x",
@@ -367,7 +351,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "25"
+      "program": "15"
      },
      {
       "device": "roland-jupiter-x",
@@ -384,7 +368,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "14"
+      "program": "16"
      },
      {
       "device": "roland-jupiter-x",
@@ -401,7 +385,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "16"
+      "program": "37"
      },
      {
       "device": "roland-jupiter-x",
@@ -435,7 +419,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "19"
+      "program": "13"
      },
      {
       "device": "roland-jupiter-x",
@@ -481,7 +465,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "22"
+      "program": "25"
      },
      {
       "device": "roland-jupiter-x",
@@ -498,7 +482,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "24"
+      "program": "40"
      },
      {
       "device": "roland-jupiter-x",
@@ -549,7 +533,7 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "34"
+      "program": "23"
      },
      {
       "device": "roland-jupiter-x",
@@ -566,29 +550,12 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "31"
+      "program": "34"
      },
      {
       "device": "roland-jupiter-x",
       "bank": "bank-9",
       "program": "15"
-     }
-    ]
-   },
-   {
-    "songId": "33",
-    "title": "Uptown Funk",
-    "artist": "Bruno Mars",
-    "programs": [
-     {
-      "device": "korg-triton-studio",
-      "bank": "extd",
-      "program": "32"
-     },
-     {
-      "device": "roland-jupiter-x",
-      "bank": "bank-9",
-      "program": "16"
      }
     ]
    },
@@ -600,28 +567,63 @@
      {
       "device": "korg-triton-studio",
       "bank": "extd",
-      "program": "38"
+      "program": "10"
+     }
+    ]
+   },
+   {
+    "songId": "35",
+    "title": "Wham Medley",
+    "artist": "Wham",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "17"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-10",
+      "program": "1"
+     }
+    ]
+   },
+   {
+    "songId": "36",
+    "title": "Take On Me",
+    "artist": "A-Ha",
+    "info": "First chord Dmaj7\nC# A note\nBm\nC# A again",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "19"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-10",
+      "program": "2"
      }
     ]
    }
   ],
-  "lastSongId": 34,
+  "lastSongId": 36,
   "sets": [
    {
     "name": "80s 45 Min Set One",
     "slug": "80s-45-min-set-one",
     "songs": [
      "1",
-     "5",
      "3",
      "10",
      "4",
+     "19",
      "8",
-     "11",
-     "28",
+     "7",
+     "2",
      "15",
-     "13",
-     "16"
+     "16",
+     "34"
     ]
    },
    {
@@ -630,35 +632,18 @@
     "songs": [
      "17",
      "18",
-     "19",
+     "24",
+     "12",
      "20",
      "21",
-     "2",
+     "35",
      "7",
-     "12",
      "23",
-     "24",
+     "36",
      "25",
      "6",
      "9",
-     "26",
-     "31",
-     "27"
-    ]
-   },
-   {
-    "name": "Showcase 80s 30 Min",
-    "slug": "showcase-80s-30-min",
-    "songs": [
-     "2",
-     "4",
-     "19",
-     "12",
-     "21",
-     "25",
-     "6",
-     "26",
-     "31"
+     "26"
     ]
    }
   ]

@@ -8,6 +8,8 @@ body {
     color: #eeeef2;
     font-family: Verdana, sans-serif;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 .tabulator {
@@ -47,11 +49,10 @@ body {
 }
 
 .outer-container {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
+    width:calc(100% - 60px);
+    height:calc(100% - 60px);
+    margin-top: 10px;
+    margin-left: 10px;
     border: 2px outset;
     text-align: center;
     padding: 12px;
