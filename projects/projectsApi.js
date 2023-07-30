@@ -105,6 +105,18 @@ const selectPort = (projectSlug, port) => {
     saveProjects(projects)
 }
 
+const getMidiThruStatus = (projectSlug) => {
+    let project = getProjectBySlug(projectSlug)
+    return project['midiThru'] ?? false
+}
+
+const toggleMidiThru = (projectSlug) => {
+    let project = getProjectBySlug(projectSlug)
+    project.midiThru = !(project['midiThru'] ?? false)
+    saveProjects(projects)
+    return project['midiThru']
+}
+
 module.exports = {
     selectPort,
     getProjects,
@@ -115,5 +127,7 @@ module.exports = {
     getProjectName,
     saveConnections,
     getDeviceChannels,
-    getUsedDeviceList
+    getUsedDeviceList,
+    toggleMidiThru,
+    getMidiThruStatus,
 }

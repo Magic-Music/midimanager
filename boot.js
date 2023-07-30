@@ -25,7 +25,9 @@ contextBridge.exposeInMainWorld('projectsApi', {
     getConnections: (projectSlug) => projectApi.getConnections(projectSlug),
     saveConnections: (projectSlug, devices) => projectApi.saveConnections(projectSlug, devices),
     getDeviceChannels: (projectSlug) => projectApi.getDeviceChannels(projectSlug),
-    getUsedDeviceList: (projectSlug) => projectApi.getUsedDeviceList(projectSlug)
+    getUsedDeviceList: (projectSlug) => projectApi.getUsedDeviceList(projectSlug),
+    toggleMidiThru: (projectSlug) => projectApi.toggleMidiThru(projectSlug),
+    getMidiThruStatus: (projectSlug) => projectApi.getMidiThruStatus(projectSlug)
 })
 
 const songApi = require('./songs/songsApi')

@@ -262,6 +262,12 @@ body {
     visibility: visible;
 }
 
+.button-left {
+    float:left;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .big-button {
     box-shadow: inset 0px 0px 0px 2px #9fb4f2;
     background: linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
@@ -337,6 +343,7 @@ body {
     background-color: #0072b2;
     border: 1px outset #999999;
 }
+
 .info-button:hover {
     border: inset;
     background-color: #015785;

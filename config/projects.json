@@ -447,13 +447,18 @@
    },
    {
     "songId": "26",
-    "title": "A Little Respect",
+    "title": "A Little Respect/Jump",
     "artist": "Erasure",
     "programs": [
      {
       "device": "korg-triton-studio",
       "bank": "extd",
       "program": "23"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-9",
+      "program": "14"
      }
     ]
    },
@@ -646,6 +651,7 @@
      "26"
     ]
    }
-  ]
+  ],
+  "midiThru": false
  }
 ]
