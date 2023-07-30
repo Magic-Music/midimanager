@@ -8,6 +8,7 @@ const projectSlug =getQueryParam('project')
 window.onload = showConnections();
 
 addOnClick('select-port', function() {redirect("projects/port.html", {project:projectSlug})})
+addOnClick('midi-thru', function() {toggleMidiThru()})
 addOnClick('add-connection', function() {addConnection()})
 addOnClick('save-connections', function() {saveConnections()})
 addOnClick('return-to-projects', function() {window.location="projects/projects.html"})
@@ -47,6 +48,8 @@ function showConnections() {
             }
         ],
     })
+
+    setMidiThruButton()
 }
 
 function connectionsEdited() {
@@ -89,4 +92,15 @@ function saveConnections() {
 
     invisibleButton('save-connections')
     edited = false
+}
+
+function setMidiThruButton() {
+    midiThru = window.projectsApi.getMidiThruStatus(projectSlug)
+    html('midi-thru', midiThru ? "Disable Midi Thru" : "Enable Midi Thru")
+}
+
+function toggleMidiThru()
+{
+    window.projectsApi.toggleMidiThru(projectSlug)
+    setMidiThruButton()
 }

@@ -1,6 +1,6 @@
 const jzz = require('jzz');
 const {getBankDataBySlug} = require("../devices/devicesApi");
-const {getDeviceChannels, getCurrentPort} = require("../projects/projectsApi");
+const {getDeviceChannels, getCurrentPort, getMidiThruStatus} = require("../projects/projectsApi");
 const {getPrograms} = require("../songs/songsApi");
 
 let midiIn
@@ -75,7 +75,7 @@ const getMidiIn = (projectSlug) => {
 }
 
 const connectMidiThru = (projectSlug) => {
-    if (!projectSlug) {
+    if (!getMidiThruStatus(projectSlug)) {
         return
     }
 
@@ -97,6 +97,10 @@ const connectMidiThru = (projectSlug) => {
 }
 
 const disconnectMidiThru = () => {
+    if (!getMidiThruStatus) {
+        return
+    }
+
     disconnect(midiThru)
     disconnect(midiOut)
     disconnect(midiIn)

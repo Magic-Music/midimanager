@@ -12,4 +12,5 @@ function showSetlists() {
     })
 
     connectMidiThru()
+    html('midi-thru', window.projectsApi.getMidiThruStatus(projectSlug) ? "Midi Thru Enabled" : "Midi Thru Disabled")
 }
