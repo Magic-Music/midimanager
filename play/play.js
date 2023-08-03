@@ -15,15 +15,12 @@ function showSet() {
     addOnClick('extra-song', function() {showExtraSongModal()})
     addOnClick('close', function() {hideExtraSongModal()})
 
-    addOnClick('back', function() {
-        redirect("play/set.html",{project:projectSlug})
-    })
-
-    addOnClick('end-set', function() {
-        redirect("play/set.html",{project:projectSlug})
-    })
+    addOnClick('back', function() {goBack()})
+    addOnClick('end-set', function() {goBack()})
 
     addOnClick('next-song', function() {nextSong()})
+    addKeyPress(13, nextSong)
+    addKeyPress(32, nextSong)
 
     html('set-name', set.name)
 
@@ -82,11 +79,19 @@ function nextSong() {
     if (currentSong == numberOfSongs) {
         endSet()
     }
+
+    if (currentSong > numberOfSongs) {
+        goBack()
+    }
 }
 
 function endSet() {
     el('next-song').classList.add('button-hidden')
     el('end-set').classList.remove('button-hidden')
+}
+
+function goBack() {
+    redirect("play/set.html",{project:projectSlug})
 }
 
 function showExtraSongModal()
