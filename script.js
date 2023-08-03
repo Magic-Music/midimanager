@@ -9,6 +9,8 @@ String.prototype.slugify = function (separator = "-") {
         .replace(/\s+/g, separator);
 };
 
+let keyPresses = {}
+
 function connectMidiThru() {
     window.midiApi.connectMidiThru(getQueryParam('project'))
 }
@@ -36,6 +38,22 @@ function getValue(id)
 
 function addOnClick(id, fn) {
     el(id).addEventListener("click", fn)
+}
+
+function addKeyPress(keyCode, fn) {
+    if (Object.keys(keyPresses).length === 0) {
+        document.body.addEventListener('keydown', keyPressed)
+    }
+
+    keyPresses[keyCode] = fn
+
+    console.log(keyPresses)
+}
+
+function keyPressed(event) {
+    if (keyPresses[event.keyCode] ?? null) {
+       window[keyPresses[event.keyCode]()]
+    }
 }
 
 function getQueryParam(key) {
