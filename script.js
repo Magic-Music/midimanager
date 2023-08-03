@@ -51,7 +51,7 @@ function addKeyPress(keyCode, fn) {
 }
 
 function keyPressed(event) {
-    if (keyPresses[event.keyCode] ?? null) {
+    if ((keyPresses[event.keyCode] ?? null) && !event.repeat) {
        window[keyPresses[event.keyCode]()]
     }
 }
