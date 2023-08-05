@@ -1,3 +1,12 @@
+let keyPresses = {}
+
+const numberPadDivide=111
+const numberPadMinus=109
+const numberPadStar=106
+const numberPadEnter= 13
+const numberPadBackspace= 8
+const numberPadOne = 97
+
 String.prototype.slugify = function (separator = "-") {
     return this
         .toString()
@@ -8,9 +17,6 @@ String.prototype.slugify = function (separator = "-") {
         .replace(/[^a-z0-9 ]/g, '')
         .replace(/\s+/g, separator);
 };
-
-let keyPresses = {}
-const numberPadOne = 97;
 
 function connectMidiThru() {
     window.midiApi.connectMidiThru(getQueryParam('project'))
