@@ -10,6 +10,7 @@ String.prototype.slugify = function (separator = "-") {
 };
 
 let keyPresses = {}
+const numberPadOne = 97;
 
 function connectMidiThru() {
     window.midiApi.connectMidiThru(getQueryParam('project'))
@@ -51,8 +52,9 @@ function addKeyPress(keyCode, fn) {
 }
 
 function keyPressed(event) {
+    console.log("Key ", event.keyCode)
     if ((keyPresses[event.keyCode] ?? null) && !event.repeat) {
-       window[keyPresses[event.keyCode]()]
+       keyPresses[event.keyCode]()
     }
 }
 
