@@ -13,14 +13,17 @@ function showSet() {
     songs = window.songsApi.getSongs(projectSlug)
 
     addOnClick('extra-song', function() {showExtraSongModal()})
+    addKeyPress(106, function() {showExtraSongModal()})
     addOnClick('close', function() {hideExtraSongModal()})
+    addKeyPress(111, function() {hideExtraSongModal()})
 
     addOnClick('back', function() {goBack()})
     addOnClick('end-set', function() {goBack()})
+    addKeyPress(8, function() {goBack()})
 
     addOnClick('next-song', function() {nextSong()})
-    addKeyPress(13, nextSong)
-    addKeyPress(32, nextSong)
+    addKeyPress(13, function() {nextSong()})
+    addKeyPress(32, function() {nextSong()})
 
     html('set-name', set.name)
 

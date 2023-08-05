@@ -6,9 +6,14 @@ function showSetlists() {
     const sets = window.setsApi.getSetlists(projectSlug)
     let setlistContainer = document.getElementById('setlists')
 
+    let keypress = numberPadOne;
     sets.forEach((set) => {
-        let query = JSON.stringify({project:projectSlug, set:set.slug})
-        setlistContainer.innerHTML += ("<button class='big-button set-button' onclick='redirect(\"play/play.html\", " + query + ")'>" + set.name + "</button>")
+        let query = {project:projectSlug, set:set.slug}
+        let queryString = JSON.stringify(query)
+        setlistContainer.innerHTML += ("<button class='big-button set-button' onclick='redirect(\"play/play.html\", " + queryString + ")'>" + set.name + "</button>")
+        addKeyPress(keypress++, function() {
+            redirect("play/play.html", query)
+        })
     })
 
     connectMidiThru()
