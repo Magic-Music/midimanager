@@ -1,3 +1,12 @@
+let keyPresses = {}
+
+const numberPadDivide=111
+const numberPadMinus=109
+const numberPadStar=106
+const numberPadEnter= 13
+const numberPadBackspace= 8
+const numberPadOne = 97
+
 String.prototype.slugify = function (separator = "-") {
     return this
         .toString()
@@ -8,8 +17,6 @@ String.prototype.slugify = function (separator = "-") {
         .replace(/[^a-z0-9 ]/g, '')
         .replace(/\s+/g, separator);
 };
-
-let keyPresses = {}
 
 function connectMidiThru() {
     window.midiApi.connectMidiThru(getQueryParam('project'))
@@ -51,8 +58,9 @@ function addKeyPress(keyCode, fn) {
 }
 
 function keyPressed(event) {
+    console.log("Key ", event.keyCode)
     if ((keyPresses[event.keyCode] ?? null) && !event.repeat) {
-       window[keyPresses[event.keyCode]()]
+       keyPresses[event.keyCode]()
     }
 }
 

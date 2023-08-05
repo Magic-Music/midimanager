@@ -9,7 +9,12 @@ function showProjects() {
 
     let projectsContainer = document.getElementById('projects')
 
+    let keypress = numberPadOne;
     projects.forEach((project) => {
         projectsContainer.innerHTML += ("<button class='big-button' onclick='redirect(\"play/set.html\", {project:\"" + project.slug + "\"})'>" + project.name + "</button>")
+        addKeyPress(keypress++, function() {
+            console.log("Project is", project)
+            redirect("play/set.html", {project: project.slug})
+        })
     })
 }

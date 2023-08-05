@@ -11,18 +11,9 @@ function showSet() {
     const setSlug = getQueryParam('set')
     const set = window.setsApi.getSet(projectSlug, setSlug)
     songs = window.songsApi.getSongs(projectSlug)
-
-    addOnClick('extra-song', function() {showExtraSongModal()})
-    addOnClick('close', function() {hideExtraSongModal()})
-
-    addOnClick('back', function() {goBack()})
-    addOnClick('end-set', function() {goBack()})
-
-    addOnClick('next-song', function() {nextSong()})
-    addKeyPress(13, nextSong)
-    addKeyPress(32, nextSong)
-
     html('set-name', set.name)
+
+    addListeners()
 
     set.songs.forEach((song) => {
         numberOfSongs++
@@ -57,6 +48,23 @@ function showSet() {
     connectMidiThru()
 }
 
+function addListeners() {
+    addOnClick('extra-song', function() {showExtraSongModal()})
+    addKeyPress(numberPadStar, function() {showExtraSongModal()})
+
+    addOnClick('close', function() {hideExtraSongModal()})
+    addKeyPress(numberPadDivide, function() {hideExtraSongModal()})
+
+    addOnClick('back', function() {goBack()})
+    addOnClick('end-set', function() {goBack()})
+    addKeyPress(numberPadMinus, function() {goBack()})
+
+    addOnClick('next-song', function() {nextSong()})
+    addKeyPress(numberPadEnter, function() {nextSong()})
+
+    addKeyPress(numberPadBackspace, function() {previousSong()})
+}
+
 function transmit(songId) {
     window.midiApi.sendSongById(projectSlug, songId)
     html('song-info', window.songsApi.getSongInfo(projectSlug, songId))
@@ -82,6 +90,16 @@ function nextSong() {
 
     if (currentSong > numberOfSongs) {
         goBack()
+    }
+}
+
+function previousSong()
+{
+    if (currentSong > 1) {
+        el('song-' + currentSong).classList.remove('current-song')
+        currentSong--
+        el('song-' + currentSong).click()
+        el('song-' + currentSong).classList.add('current-song')
     }
 }
 
