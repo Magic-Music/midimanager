@@ -48,32 +48,12 @@ function showSet() {
 }
 
 function addListeners() {
-    addOnClick('extra-song', function () {
-        showExtraSongModal()
-    })
-
     addKeyPress(openExtraSongModalKey, function () {
         showExtraSongModal()
     })
 
-    addOnClick('close', function () {
-        hideExtraSongModal()
-    })
-
-    addOnClick('back', function () {
-        goBack()
-    })
-
-    addOnClick('end-set', function () {
-        goBack()
-    })
-
     addKeyPress(goBackKey, function () {
         goBackKeyPressed()
-    })
-
-    addOnClick('next-song', function () {
-        nextSong()
     })
 
     addKeyPress(nextSongKey, function () {
@@ -94,7 +74,7 @@ function nextSong() {
     if (currentSong > 0) {
         el('song-' + currentSong).classList.remove('current-song')
     } else {
-        html('next-song', "NEXT SONG")
+        html('next-song', "Enter: Next song | Backspace: Previous song | Space: Extra song | Escape: Exit")
     }
 
     currentSong++
@@ -104,12 +84,8 @@ function nextSong() {
         el('song-' + currentSong).classList.add('current-song')
     }
 
-    if (currentSong == numberOfSongs) {
-        endSet()
-    }
-
     if (currentSong > numberOfSongs) {
-        goBack()
+        endSet()
     }
 }
 
@@ -133,6 +109,8 @@ function goBackKeyPressed() {
 function endSet() {
     el('next-song').classList.add('button-hidden')
     el('end-set').classList.remove('button-hidden')
+    // el('song-' + currentSong).classList.remove('current-song')
+    html('song-info', 'END OF SET!')
 }
 
 function goBack() {
