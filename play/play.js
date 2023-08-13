@@ -1,8 +1,7 @@
 let projectSlug
 let currentSong = 0
 let numberOfSongs = 0
-let songIds = []
-let allSongs
+let modalOpen = false
 
 window.onload = showSet();
 
@@ -41,7 +40,7 @@ function showSet() {
         ],
     })
 
-    allSongsTable.on('rowClick', function(e, row) {
+    allSongsTable.on('rowClick', function (e, row) {
         window.midiApi.sendSongById(projectSlug, row.getData().songId)
     })
 
@@ -49,20 +48,41 @@ function showSet() {
 }
 
 function addListeners() {
-    addOnClick('extra-song', function() {showExtraSongModal()})
-    addKeyPress(numberPadStar, function() {showExtraSongModal()})
+    addOnClick('extra-song', function () {
+        showExtraSongModal()
+    })
 
-    addOnClick('close', function() {hideExtraSongModal()})
-    addKeyPress(numberPadDivide, function() {hideExtraSongModal()})
+    addKeyPress(openExtraSongModalKey, function () {
+        showExtraSongModal()
+    })
 
-    addOnClick('back', function() {goBack()})
-    addOnClick('end-set', function() {goBack()})
-    addKeyPress(numberPadMinus, function() {goBack()})
+    addOnClick('close', function () {
+        hideExtraSongModal()
+    })
 
-    addOnClick('next-song', function() {nextSong()})
-    addKeyPress(numberPadEnter, function() {nextSong()})
+    addOnClick('back', function () {
+        goBack()
+    })
 
-    addKeyPress(numberPadBackspace, function() {previousSong()})
+    addOnClick('end-set', function () {
+        goBack()
+    })
+
+    addKeyPress(goBackKey, function () {
+        goBackKeyPressed()
+    })
+
+    addOnClick('next-song', function () {
+        nextSong()
+    })
+
+    addKeyPress(nextSongKey, function () {
+        nextSong()
+    })
+
+    addKeyPress(previousSongKey, function () {
+        previousSong()
+    })
 }
 
 function transmit(songId) {
@@ -93,13 +113,20 @@ function nextSong() {
     }
 }
 
-function previousSong()
-{
+function previousSong() {
     if (currentSong > 1) {
         el('song-' + currentSong).classList.remove('current-song')
         currentSong--
         el('song-' + currentSong).click()
         el('song-' + currentSong).classList.add('current-song')
+    }
+}
+
+function goBackKeyPressed() {
+    if (modalOpen) {
+        hideExtraSongModal()
+    } else {
+        goBack()
     }
 }
 
@@ -109,15 +136,15 @@ function endSet() {
 }
 
 function goBack() {
-    redirect("play/set.html",{project:projectSlug})
+    redirect("play/set.html", {project: projectSlug})
 }
 
-function showExtraSongModal()
-{
+function showExtraSongModal() {
     el('modal-background').classList.remove('modal-hidden')
+    modalOpen = true
 }
 
-function hideExtraSongModal()
-{
+function hideExtraSongModal() {
     el('modal-background').classList.add('modal-hidden')
+    modalOpen = false
 }

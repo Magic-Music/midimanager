@@ -17,7 +17,7 @@ const createWindow = () => {
     win.setMenu(null)
     
     //Uncomment to show developer tools
-    //win.webContents.openDevTools()
+    win.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
