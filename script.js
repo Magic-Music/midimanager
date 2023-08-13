@@ -1,11 +1,10 @@
 let keyPresses = {}
 
-const numberPadDivide=111
-const numberPadMinus=109
-const numberPadStar=106
-const numberPadEnter= 13
-const numberPadBackspace= 8
-const numberPadOne = 97
+const goBackKey = 27
+const openExtraSongModalKey = 32
+const nextSongKey = 13
+const previousSongKey = 8
+const numbersOneKey = 49
 
 String.prototype.slugify = function (separator = "-") {
     return this

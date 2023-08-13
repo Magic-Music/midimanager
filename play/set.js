@@ -2,11 +2,13 @@ window.onload = showSetlists();
 
 function showSetlists() {
     addOnClick('home', function() {redirect("home/home.html")})
+    addKeyPress(goBackKey, function() {redirect("home/home.html")})
+
     const projectSlug = getQueryParam('project')
     const sets = window.setsApi.getSetlists(projectSlug)
     let setlistContainer = document.getElementById('setlists')
 
-    let keypress = numberPadOne;
+    let keypress = numbersOneKey;
     sets.forEach((set) => {
         let query = {project:projectSlug, set:set.slug}
         let queryString = JSON.stringify(query)
