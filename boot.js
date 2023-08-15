@@ -53,8 +53,15 @@ contextBridge.exposeInMainWorld('setsApi', {
 const midi = require('./midi/midiApi')
 contextBridge.exposeInMainWorld('midiApi', {
     getPorts: () => midi.getPorts(),
-    sendSongById: (projectSlug, programData) => midi. sendSongById(projectSlug, programData),
+    sendSongById: (projectSlug, programData) => midi.sendSongById(projectSlug, programData),
     sendSongToMidi: (projectSlug, programData) => midi.sendSongToMidi(projectSlug, programData),
     connectMidiThru: (projectSlug) => midi.connectMidiThru(projectSlug),
     disconnectMidiThru: () => midi.disconnectMidiThru()
+})
+
+const audio = require('./play/audioApi')
+contextBridge.exposeInMainWorld('audioApi', {
+    playAudio: () => audio.playAudio(),
+    stopAudio: () => audio.stopAudio(),
+    getAudioFiles: () => audio.getAudioFiles()
 })

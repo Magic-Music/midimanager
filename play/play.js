@@ -1,8 +1,7 @@
 let projectSlug
 let currentSong = 0
 let numberOfSongs = 0
-let songIds = []
-let allSongs
+let modalOpen = false
 
 window.onload = showSet();
 
@@ -41,7 +40,7 @@ function showSet() {
         ],
     })
 
-    allSongsTable.on('rowClick', function(e, row) {
+    allSongsTable.on('rowClick', function (e, row) {
         window.midiApi.sendSongById(projectSlug, row.getData().songId)
     })
 
@@ -49,20 +48,29 @@ function showSet() {
 }
 
 function addListeners() {
-    addOnClick('extra-song', function() {showExtraSongModal()})
-    addKeyPress(numberPadStar, function() {showExtraSongModal()})
+    addKeyPress(openExtraSongModalKey, function () {
+        showExtraSongModal()
+    })
 
-    addOnClick('close', function() {hideExtraSongModal()})
-    addKeyPress(numberPadDivide, function() {hideExtraSongModal()})
+    addKeyPress(goBackKey, function () {
+        goBackKeyPressed()
+    })
 
-    addOnClick('back', function() {goBack()})
-    addOnClick('end-set', function() {goBack()})
-    addKeyPress(numberPadMinus, function() {goBack()})
+    addKeyPress(nextSongKey, function () {
+        nextSong()
+    })
 
-    addOnClick('next-song', function() {nextSong()})
-    addKeyPress(numberPadEnter, function() {nextSong()})
+    addKeyPress(previousSongKey, function () {
+        previousSong()
+    })
 
-    addKeyPress(numberPadBackspace, function() {previousSong()})
+    addKeyPress(playAudioKey, function () {
+        window.audioApi.playAudio()
+    })
+
+    addKeyPress(stopAudioKey, function () {
+        window.audioApi.stopAudio()
+    })
 }
 
 function transmit(songId) {
@@ -74,7 +82,7 @@ function nextSong() {
     if (currentSong > 0) {
         el('song-' + currentSong).classList.remove('current-song')
     } else {
-        html('next-song', "NEXT SONG")
+        html('next-song', "Enter: Next song | Backspace: Previous song | Space: Extra song | Escape: Exit")
     }
 
     currentSong++
@@ -84,17 +92,12 @@ function nextSong() {
         el('song-' + currentSong).classList.add('current-song')
     }
 
-    if (currentSong == numberOfSongs) {
-        endSet()
-    }
-
     if (currentSong > numberOfSongs) {
-        goBack()
+        endSet()
     }
 }
 
-function previousSong()
-{
+function previousSong() {
     if (currentSong > 1) {
         el('song-' + currentSong).classList.remove('current-song')
         currentSong--
@@ -103,21 +106,31 @@ function previousSong()
     }
 }
 
+function goBackKeyPressed() {
+    if (modalOpen) {
+        hideExtraSongModal()
+    } else {
+        goBack()
+    }
+}
+
 function endSet() {
     el('next-song').classList.add('button-hidden')
     el('end-set').classList.remove('button-hidden')
+    // el('song-' + currentSong).classList.remove('current-song')
+    html('song-info', 'END OF SET!')
 }
 
 function goBack() {
-    redirect("play/set.html",{project:projectSlug})
+    redirect("play/set.html", {project: projectSlug})
 }
 
-function showExtraSongModal()
-{
+function showExtraSongModal() {
     el('modal-background').classList.remove('modal-hidden')
+    modalOpen = true
 }
 
-function hideExtraSongModal()
-{
+function hideExtraSongModal() {
     el('modal-background').classList.add('modal-hidden')
+    modalOpen = false
 }
