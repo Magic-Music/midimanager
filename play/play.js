@@ -63,6 +63,14 @@ function addListeners() {
     addKeyPress(previousSongKey, function () {
         previousSong()
     })
+
+    addKeyPress(playAudioKey, function () {
+        window.audioApi.playAudio()
+    })
+
+    addKeyPress(stopAudioKey, function () {
+        window.audioApi.stopAudio()
+    })
 }
 
 function transmit(songId) {
