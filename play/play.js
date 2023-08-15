@@ -117,7 +117,6 @@ function goBackKeyPressed() {
 function endSet() {
     el('next-song').classList.add('button-hidden')
     el('end-set').classList.remove('button-hidden')
-    // el('song-' + currentSong).classList.remove('current-song')
     html('song-info', 'END OF SET!')
 }
 

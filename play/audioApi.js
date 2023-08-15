@@ -43,7 +43,6 @@ const playNextTrack = () => {
     howlAudio.play()
 }
 
-
 const stopAudio = () => {
     howlAudio.fade(1, 0, 3000)
 
