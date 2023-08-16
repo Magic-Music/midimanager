@@ -65,11 +65,11 @@ function addListeners() {
     })
 
     addKeyPress(playAudioKey, function () {
-        window.audioApi.playAudio()
+        window.electronAPI.playAudio()
     })
 
     addKeyPress(stopAudioKey, function () {
-        window.audioApi.stopAudio()
+        window.electronAPI.stopAudio()
     })
 }
 

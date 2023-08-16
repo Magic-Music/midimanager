@@ -1,4 +1,4 @@
-const { contextBridge } = require('electron')
+const { contextBridge, ipcRenderer } = require('electron')
 
 const deviceApi = require('./devices/devicesApi')
 contextBridge.exposeInMainWorld('devicesApi', {
@@ -59,9 +59,7 @@ contextBridge.exposeInMainWorld('midiApi', {
     disconnectMidiThru: () => midi.disconnectMidiThru()
 })
 
-const audio = require('./play/audioApi')
-contextBridge.exposeInMainWorld('audioApi', {
-    playAudio: () => audio.playAudio(),
-    stopAudio: () => audio.stopAudio(),
-    getAudioFiles: () => audio.getAudioFiles()
+contextBridge.exposeInMainWorld('electronAPI', {
+    playAudio: () => ipcRenderer.send('playAudio'),
+    stopAudio: () => ipcRenderer.send('stopAudio'),
 })
