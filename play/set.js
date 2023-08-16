@@ -28,11 +28,12 @@ function addListeners() {
     addKeyPress(goBackKey, function () {
         redirect("home/home.html")
     })
-    addKeyPress(80, function () {
-        window.audioApi.playAudio()
+
+    addKeyPress(playAudioKey, function () {
+        window.electronAPI.playAudio()
     })
 
-    addKeyPress(79, function () {
-        window.audioApi.stopAudio()
+    addKeyPress(stopAudioKey, function () {
+        window.electronAPI.stopAudio()
     })
 }
