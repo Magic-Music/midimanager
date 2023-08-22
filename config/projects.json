@@ -2,7 +2,7 @@
  {
   "name": "Regener8",
   "slug": "regener8",
-  "midiPort": "USB MIDI Interface MIDI 1",
+  "midiPort": "SL STUDIO",
   "devices": [
    {
     "deviceSlug": "korg-triton-studio",
@@ -642,7 +642,6 @@
      "20",
      "21",
      "35",
-     "7",
      "23",
      "36",
      "25",

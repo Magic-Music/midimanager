@@ -49,7 +49,7 @@ const stopAudio = () => {
     howlAudio.once('fade', () => {
         setTimeout(() => {
             howlAudio.pause()
-        }, 2000)
+        }, 3000)
     })
 }
 

@@ -32,17 +32,19 @@ const sendSongToMidi = (projectSlug, programData) => {
     let channels = getProjectMidiChannels(projectSlug)
     programData.forEach((progData) => {
         let channel = channels[progData.deviceSlug] - 1 //1-16 transmitted as 0-15
-        let offset = 0
+        let programNumber = Number(progData.program)
 
         if (progData.bankSlug !== '-') {
             let bankData = getBankDataBySlug(progData.deviceSlug, progData.bankSlug)
-            offset = Number(bankData['offset'])
-            getMidiOut(projectSlug).bank(channel, bankData.msb, bankData.lsb).wait(200)
+            programNumber += Number(bankData['offset'])
+            getMidiOut(projectSlug)
+                .bankMSB(channel, bankData.msb).wait(100)
+                .bankLSB(channel, bankData.lsb).wait(100)
+                .program(channel, programNumber)
+        } else {
+            getMidiOut(projectSlug).program(channel, programNumber)
         }
 
-        let programNumber = offset
-            + Number(progData.program)
-        getMidiOut(projectSlug).program(channel, programNumber)
     })
 }
 
