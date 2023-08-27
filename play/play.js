@@ -64,13 +64,7 @@ function addListeners() {
         previousSong()
     })
 
-    addKeyPress(playAudioKey, function () {
-        window.electronAPI.playAudio()
-    })
-
-    addKeyPress(stopAudioKey, function () {
-        window.electronAPI.stopAudio()
-    })
+    setPlayControls();
 }
 
 function transmit(songId) {

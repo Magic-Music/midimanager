@@ -5,7 +5,9 @@ const audioPath = './audio'
 let howlAudio
 let audioFiles
 let trackNumber = 0;
-let playing = false
+let playInitiated = false
+let playing = false;
+let fading = false;
 
 const getAudioFiles = () => {
     return fs.readdirSync(audioPath).filter((filename) => {
@@ -14,13 +16,21 @@ const getAudioFiles = () => {
 }
 
 const playAudio = () => {
-    if (!playing) {
-        audioFiles = shuffleTracks(getAudioFiles())
+    if (!playInitiated) {
+        playInitiated = true
         playing = true
+        audioFiles = shuffleTracks(getAudioFiles())
         playNextTrack()
     } else {
-        howlAudio.fade(0, 1, 2000)
-        howlAudio.play()
+        if (!playing && !fading) {
+            fading = true
+            playing = true
+            howlAudio.fade(0, 1, 2000)
+            howlAudio.play()
+            howlAudio.once('fade', () => {
+                fading = false;
+            })
+        }
     }
 }
 
@@ -44,12 +54,18 @@ const playNextTrack = () => {
 }
 
 const stopAudio = () => {
-    howlAudio.fade(1, 0, 3000)
+    if (!playing || fading) {
+        return
+    }
 
+    fading = true;
+    howlAudio.fade(1, 0, 3000)
     howlAudio.once('fade', () => {
         setTimeout(() => {
+            fading = false;
+            playing = false;
             howlAudio.pause()
-        }, 3000)
+        }, 300)
     })
 }
 
