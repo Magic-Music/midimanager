@@ -1,13 +1,17 @@
 let keyPresses = {}
+let keyReleases = {}
+let audioUnlocked = false
+
 const keycodes = getKeycodes()
 
 const goBackKey             = keycodes.ESCAPE
-const openExtraSongModalKey = keycodes.SPACE
+const openExtraSongModalKey = keycodes.HASH
 const nextSongKey           = keycodes.RETURN
 const previousSongKey       = keycodes.BACK_SPACE
 const numbersOneKey         = keycodes.NUM1
 const playAudioKey          = keycodes.P
 const stopAudioKey          = keycodes.O
+const unlockAudioKey        = keycodes.SPACE
 
 console.log(goBackKey)
 String.prototype.slugify = function (separator = "-") {
@@ -60,8 +64,44 @@ function addKeyPress(keyCode, fn) {
 
 function keyPressed(event) {
     if ((keyPresses[event.keyCode] ?? null) && !event.repeat) {
-       keyPresses[event.keyCode]()
+        keyPresses[event.keyCode]()
     }
+}
+
+function addKeyRelease(keyCode, fn) {
+    if (Object.keys(keyReleases).length === 0) {
+        document.body.addEventListener('keyup', keyReleased)
+    }
+
+    keyReleases[keyCode] = fn
+}
+
+function keyReleased(event) {
+    if ((keyReleases[event.keyCode] ?? null) && !event.repeat) {
+        keyReleases[event.keyCode]()
+    }
+}
+
+function setPlayControls() {
+    addKeyPress(playAudioKey, function () {
+        if (audioUnlocked) {
+            window.electronAPI.playAudio()
+        }
+    })
+
+    addKeyPress(stopAudioKey, function () {
+        if (audioUnlocked) {
+            window.electronAPI.stopAudio()
+        }
+    })
+
+    addKeyPress(unlockAudioKey, function () {
+        audioUnlocked = true
+    })
+
+    addKeyRelease(unlockAudioKey, function () {
+        audioUnlocked = false
+    })
 }
 
 function getQueryParam(key) {
@@ -241,6 +281,7 @@ function getKeycodes() {
         BACK_SLASH: 220,
         CLOSE_BRACKET: 221,
         QUOTE: 222,
+        HASH: 222,
         META: 224
     };
 }

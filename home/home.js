@@ -20,20 +20,18 @@ function addListeners() {
     addOnClick('setup-devices', function () {
         window.location = "devices/devices.html"
     })
+
     addOnClick('setup-projects', function () {
         window.location = "projects/projects.html"
     })
+
     addOnClick('exit-application', function () {
         window.close()
     })
+
     addKeyPress(goBackKey, function () {
         window.close()
     })
-    addKeyPress(playAudioKey, function () {
-        window.electronAPI.playAudio()
-    })
 
-    addKeyPress(stopAudioKey, function () {
-        window.electronAPI.stopAudio()
-    })
+    setPlayControls()
 }

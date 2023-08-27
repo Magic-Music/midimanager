@@ -25,15 +25,10 @@ function addListeners() {
     addOnClick('home', function () {
         redirect("home/home.html")
     })
+
     addKeyPress(goBackKey, function () {
         redirect("home/home.html")
     })
 
-    addKeyPress(playAudioKey, function () {
-        window.electronAPI.playAudio()
-    })
-
-    addKeyPress(stopAudioKey, function () {
-        window.electronAPI.stopAudio()
-    })
+    setPlayControls()
 }
