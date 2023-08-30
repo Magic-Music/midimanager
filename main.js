@@ -48,8 +48,8 @@ const createWindow = () => {
     })
 
     //Uncomment to show developer tools
-    // win.webContents.openDevTools()
-    // audioWin.webContents.openDevTools()
+    //win.webContents.openDevTools()
+    //audioWin.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
