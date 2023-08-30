@@ -13,7 +13,6 @@ const playAudioKey          = keycodes.P
 const stopAudioKey          = keycodes.O
 const unlockAudioKey        = keycodes.SPACE
 
-console.log(goBackKey)
 String.prototype.slugify = function (separator = "-") {
     return this
         .toString()
@@ -102,6 +101,10 @@ function setPlayControls() {
     addKeyRelease(unlockAudioKey, function () {
         audioUnlocked = false
     })
+}
+
+function setCurrentTrack(track) {
+    window.electronAPI.setTrackName(track)
 }
 
 function getQueryParam(key) {

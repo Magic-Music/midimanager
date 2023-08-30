@@ -24,6 +24,10 @@ const createWindow = () => {
         },
     })
 
+    ipcMain.on('setTrackName', (event, track) => {
+        audioWin.webContents.send('setTrackName', track)
+    })
+
     ipcMain.on('playAudio', () => {
         audioWin.webContents.send('playAudio')
     })

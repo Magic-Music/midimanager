@@ -70,6 +70,7 @@ function addListeners() {
 function transmit(songId) {
     window.midiApi.sendSongById(projectSlug, songId)
     html('song-info', window.songsApi.getSongInfo(projectSlug, songId))
+    setCurrentTrack( window.songsApi.getSong(projectSlug, songId).title)
 }
 
 function nextSong() {
