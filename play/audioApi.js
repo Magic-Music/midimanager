@@ -1,6 +1,7 @@
 const {Howl, Howler} = require('howler');
 const fs = require('fs')
-const audioPath = './audio'
+const jukeboxPath = './jukebox'
+const backingPath = './backing'
 
 let howlAudio
 let audioFiles
@@ -8,14 +9,27 @@ let trackNumber = 0;
 let playInitiated = false
 let playing = false;
 let fading = false;
+let backingTrack = false;
 
 const getAudioFiles = () => {
-    return fs.readdirSync(audioPath).filter((filename) => {
+    return fs.readdirSync(jukeboxPath).filter((filename) => {
         return filename !== '.gitignore'
     })
 }
 
+const setTrackName = (track) => {
+    backingTrack = track
+}
+
 const playAudio = () => {
+    if (backingTrack) {
+        playTrack()
+    } else {
+        playJukebox()
+    }
+}
+
+const playJukebox = () => {
     if (!playInitiated) {
         playInitiated = true
         playing = true
@@ -32,6 +46,26 @@ const playAudio = () => {
             })
         }
     }
+}
+
+const playTrack = () => {
+    if (playInitiated && playing) {
+        howlAudio.unload()
+    }
+    playing = true
+    playInitiated = false
+
+    howlAudio = new Howl({
+        src: backingPath + '/' + backingTrack + '.mp3',
+        html5: true
+    })
+
+    howlAudio.on('end', () => {
+        howlAudio.unload()
+        playing = false
+    })
+
+    howlAudio.play()
 }
 
 const playNextTrack = () => {
@@ -58,6 +92,12 @@ const stopAudio = () => {
         return
     }
 
+    if (playing && !playInitiated) {
+        howlAudio.unload()
+        playing = false
+        return
+    }
+
     fading = true;
     howlAudio.fade(1, 0, 3000)
     howlAudio.once('fade', () => {
@@ -76,7 +116,7 @@ const shuffleTracks = (files) => {
     }
 
     for (let i = 0; i < files.length; i++) {
-        files[i] = 'audio/' + files[i]
+        files[i] = jukeboxPath + '/' + files[i]
     }
 
     return files
@@ -85,5 +125,6 @@ const shuffleTracks = (files) => {
 module.exports = {
     playAudio,
     stopAudio,
+    setTrackName,
     getAudioFiles,
 }
