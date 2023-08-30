@@ -6,7 +6,7 @@ const backingPath = './backing'
 let howlAudio
 let audioFiles
 let trackNumber = 0;
-let playInitiated = false
+let jukeboxPlayInitiated = false
 let playing = false;
 let fading = false;
 let backingTrack = false;
@@ -30,8 +30,8 @@ const playAudio = () => {
 }
 
 const playJukebox = () => {
-    if (!playInitiated) {
-        playInitiated = true
+    if (!jukeboxPlayInitiated) {
+        jukeboxPlayInitiated = true
         playing = true
         audioFiles = shuffleTracks(getAudioFiles())
         playNextTrack()
@@ -52,9 +52,9 @@ const playTrack = () => {
     if (playing) {
         howlAudio.unload()
     }
-    
+
     playing = true
-    playInitiated = false
+    jukeboxPlayInitiated = false
 
     howlAudio = new Howl({
         src: backingPath + '/' + backingTrack + '.mp3',
@@ -93,7 +93,7 @@ const stopAudio = () => {
         return
     }
 
-    if (playing && !playInitiated) {
+    if (playing && !jukeboxPlayInitiated) {
         howlAudio.unload()
         playing = false
         return
