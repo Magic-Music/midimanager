@@ -31,4 +31,5 @@ function addListeners() {
     })
 
     setPlayControls()
+    setCurrentTrack(false)
 }

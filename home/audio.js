@@ -1,3 +1,7 @@
+window.electronAPI.setTrackName((event, track) => {
+    window.audioApi.setTrackName(track)
+})
+
 window.electronAPI.playAudio(() => {
     window.audioApi.playAudio()
     html('status', 'PLAYING')
