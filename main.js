@@ -24,6 +24,10 @@ const createWindow = () => {
         },
     })
 
+    ipcMain.on('setTrackName', (event, track) => {
+        audioWin.webContents.send('setTrackName', track)
+    })
+
     ipcMain.on('playAudio', () => {
         audioWin.webContents.send('playAudio')
     })
@@ -44,8 +48,8 @@ const createWindow = () => {
     })
 
     //Uncomment to show developer tools
-    //win.webContents.openDevTools()
-    //audioWin.webContents.openDevTools()
+    // win.webContents.openDevTools()
+    // audioWin.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {

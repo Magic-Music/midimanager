@@ -60,6 +60,7 @@ contextBridge.exposeInMainWorld('midiApi', {
 })
 
 contextBridge.exposeInMainWorld('electronAPI', {
+    setTrackName: (track) => ipcRenderer.send('setTrackName', track),
     playAudio: () => ipcRenderer.send('playAudio'),
     stopAudio: () => ipcRenderer.send('stopAudio'),
 })
