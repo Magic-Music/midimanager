@@ -107,6 +107,7 @@
     "songId": "6",
     "title": "Gold",
     "artist": "Spandau Ballet",
+    "info": "",
     "programs": [
      {
       "device": "korg-triton-studio",
@@ -124,7 +125,7 @@
     "songId": "7",
     "title": "Somewhere In My Heart",
     "artist": "Aztec Camera",
-    "info": "A  A - G-----\nG  F------\nC Major",
+    "info": "NO BACKING TRACK\nPLAY BASS\n\nA  A - G-----\nG  F------\nC Major",
     "programs": [
      {
       "device": "korg-triton-studio",
@@ -141,7 +142,7 @@
    {
     "songId": "8",
     "title": "Together In Electric Dreams",
-    "artist": "Oakey / Moroder",
+    "artist": "Oakey & Moroder",
     "programs": [
      {
       "device": "korg-triton-studio",
@@ -447,7 +448,7 @@
    },
    {
     "songId": "26",
-    "title": "A Little Respect/Jump",
+    "title": "A Little Respect",
     "artist": "Erasure",
     "programs": [
      {
@@ -534,18 +535,7 @@
     "songId": "31",
     "title": "Jump",
     "artist": "Van Halen",
-    "programs": [
-     {
-      "device": "korg-triton-studio",
-      "bank": "extd",
-      "program": "23"
-     },
-     {
-      "device": "roland-jupiter-x",
-      "bank": "bank-9",
-      "program": "14"
-     }
-    ]
+    "programs": []
    },
    {
     "songId": "32",
@@ -568,6 +558,7 @@
     "songId": "34",
     "title": "Somebody To Love",
     "artist": "Queen",
+    "info": "NO BACKING TRACK\nPLAY BASS",
     "programs": [
      {
       "device": "korg-triton-studio",
@@ -647,10 +638,11 @@
      "25",
      "6",
      "9",
-     "26"
+     "26",
+     "31"
     ]
    }
   ],
-  "midiThru": false
+  "midiThru": true
  }
 ]

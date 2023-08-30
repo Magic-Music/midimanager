@@ -56,8 +56,15 @@ const playTrack = () => {
     playing = true
     jukeboxPlayInitiated = false
 
+
+    let trackSource = backingPath + '/' + backingTrack + '.mp3'
+    if (!fs.existsSync(trackSource)) {
+        console.log("No such track: " + trackSource)
+        return
+    }
+
     howlAudio = new Howl({
-        src: backingPath + '/' + backingTrack + '.mp3',
+        src: trackSource,
         html5: true
     })
 
