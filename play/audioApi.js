@@ -49,9 +49,10 @@ const playJukebox = () => {
 }
 
 const playTrack = () => {
-    if (playInitiated && playing) {
+    if (playing) {
         howlAudio.unload()
     }
+    
     playing = true
     playInitiated = false
 
