@@ -113,11 +113,6 @@
       "device": "korg-triton-studio",
       "bank": "extd",
       "program": "21"
-     },
-     {
-      "device": "roland-jupiter-x",
-      "bank": "bank-86",
-      "program": "16"
      }
     ]
    },
@@ -165,11 +160,6 @@
       "device": "korg-triton-studio",
       "bank": "extd",
       "program": "22"
-     },
-     {
-      "device": "roland-jupiter-x",
-      "bank": "bank-86",
-      "program": "16"
      }
     ]
    },
@@ -641,8 +631,29 @@
      "26",
      "31"
     ]
+   },
+   {
+    "name": "80s 1 Hour Set",
+    "slug": "80s-1-hour-set",
+    "songs": [
+     "1",
+     "3",
+     "8",
+     "2",
+     "34",
+     "17",
+     "18",
+     "24",
+     "21",
+     "35",
+     "36",
+     "25",
+     "6",
+     "26",
+     "31"
+    ]
    }
   ],
-  "midiThru": true
+  "midiThru": false
  }
 ]
