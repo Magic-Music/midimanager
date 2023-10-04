@@ -47,7 +47,7 @@ const getSet = (projectSlug, setSlug) => {
         })
         set.songs = setSongs
     }
-console.log(set)
+
     return set
 }
 
