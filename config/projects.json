@@ -2,11 +2,11 @@
  {
   "name": "Regener8",
   "slug": "regener8",
-  "midiPort": "SL STUDIO",
+  "midiPort": "JUPITER-X",
   "devices": [
    {
     "deviceSlug": "korg-triton-studio",
-    "midiChannel": 1
+    "midiChannel": 15
    },
    {
     "deviceSlug": "roland-jupiter-x",
@@ -591,9 +591,26 @@
       "program": "2"
      }
     ]
+   },
+   {
+    "songId": "37",
+    "title": "You Give Love A Bad Name",
+    "artist": "Bon Jovi",
+    "programs": [
+     {
+      "device": "korg-triton-studio",
+      "bank": "extd",
+      "program": "38"
+     },
+     {
+      "device": "roland-jupiter-x",
+      "bank": "bank-10",
+      "program": "3"
+     }
+    ]
    }
   ],
-  "lastSongId": 36,
+  "lastSongId": 37,
   "sets": [
    {
     "name": "80s 45 Min Set One",
@@ -605,7 +622,7 @@
      "4",
      "19",
      "8",
-     "7",
+     "6",
      "2",
      "15",
      "16",
@@ -618,15 +635,15 @@
     "songs": [
      "17",
      "18",
+     "37",
      "24",
      "12",
+     "23",
      "20",
      "21",
      "35",
-     "23",
      "36",
      "25",
-     "6",
      "9",
      "26",
      "31"
