@@ -11,6 +11,7 @@ let setName = set.name
 
 window.onload = showSetSongs();
 
+addOnClick('add-gap', function() {addGapRow()})
 addOnClick('return-to-sets', function() {redirect("sets/setlists.html", {project:projectSlug})})
 addOnClick('home', function() {window.location="home/home.html"})
 
@@ -82,6 +83,10 @@ function addSong(cell) {
     saveSetSongs()
 }
 
+function addGapRow() {
+    setTable.addRow({song:"< - - GAP - - >"})
+}
+
 function deleteSetSong(cell) {
     cell.getRow().delete()
     let data = setTable.getData()
@@ -91,7 +96,7 @@ function deleteSetSong(cell) {
 }
 
 function saveSetSongs() {
-    let songIds = setTable.getData().map(song => song.songId);
+    let songIds = setTable.getData().map(song => song.songId ?? 0);
     window.setsApi.saveSet(projectSlug, setSlug, songIds)
 }
 
