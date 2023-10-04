@@ -40,7 +40,9 @@ const getSet = (projectSlug, setSlug) => {
         let setSongs = []
         songIds.forEach((songId) => {
             setSongs.push(
-                findBySlug(songs, songId, 'songId')
+                songId == 0
+                    ? {song: "< - - GAP - - >", songId:0}
+                    : findBySlug(songs, songId, 'songId')
             )
         })
         set.songs = setSongs
