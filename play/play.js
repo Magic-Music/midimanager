@@ -15,12 +15,16 @@ function showSet() {
     addListeners()
 
     set.songs.forEach((song) => {
-        numberOfSongs++
-        append(
-            'setlist',
-            "<div id='song-" + numberOfSongs + "' class='setlist-item' onclick='transmit(\"" +
-            song.songId + "\")'>" + song.song + "</div>"
-        )
+        if (song.songId == 0) {
+            append('setlist', '<div style="height:40px">')
+        } else {
+            numberOfSongs++
+            append(
+                'setlist',
+                "<div id='song-" + numberOfSongs + "' class='setlist-item' onclick='transmit(\"" +
+                song.songId + "\")'>" + song.song + "</div>"
+            )
+        }
     })
 
     allSongsTable = new Tabulator('#all-songs-table', {
