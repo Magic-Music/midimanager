@@ -50,7 +50,7 @@ function getValue(id)
 }
 
 function scrollTo(id) {
-    el(id).scrollIntoView(scrollIntoView({behavior: "smooth", block: "nearest"}))
+    el(id).scrollIntoView({behavior: "smooth", block: "center"})
 }
 
 function addOnClick(id, fn) {
