@@ -49,6 +49,10 @@ function getValue(id)
     return el(id).value
 }
 
+function scrollTo(id) {
+    el(id).scrollIntoView(scrollIntoView({behavior: "smooth", block: "nearest"}))
+}
+
 function addOnClick(id, fn) {
     el(id).addEventListener("click", fn)
 }

@@ -89,6 +89,7 @@ function nextSong() {
     if (currentSong <= numberOfSongs) {
         el('song-' + currentSong).click()
         el('song-' + currentSong).classList.add('current-song')
+        scrollTo('song-' + currentSong)
     }
 
     if (currentSong > numberOfSongs) {
@@ -102,6 +103,7 @@ function previousSong() {
         currentSong--
         el('song-' + currentSong).click()
         el('song-' + currentSong).classList.add('current-song')
+        scrollTo('song-' + currentSong)
     }
 }
 
