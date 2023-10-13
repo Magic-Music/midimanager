@@ -30,16 +30,17 @@ function showSet() {
     allSongsTable = new Tabulator('#all-songs-table', {
         placeholder: "No songs defined",
         data: songs,
-        reactiveData: true,
         layout: "fitColumns",
         columns: [
             {
                 title: "Song title",
                 field: "title",
+                headerFilter: "input"
             },
             {
                 title: "Artist",
                 field: "artist",
+                headerFilter: "input"
             }
         ],
     })
@@ -127,6 +128,9 @@ function goBack() {
 
 function showExtraSongModal() {
     el('modal-background').classList.remove('modal-hidden')
+    setTimeout(function() {
+        allSongsTable.setHeaderFilterFocus('title')
+    }, 100)
     modalOpen = true
 }
 

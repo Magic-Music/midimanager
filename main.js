@@ -5,6 +5,7 @@ const createWindow = () => {
     const win = new BrowserWindow({
         kiosk: true,
         fullscreen:true,
+        focusable: true,
         webPreferences: {
             nodeIntegration: true, // is default value after Electron v5
             contextIsolation: true, // protect against prototype pollution
@@ -16,6 +17,7 @@ const createWindow = () => {
 
     const audioWin = new BrowserWindow({
         minimizable: true,
+        show: false,
         webPreferences: {
             nodeIntegration: true, // is default value after Electron v5
             contextIsolation: true, // protect against prototype pollution
@@ -36,12 +38,11 @@ const createWindow = () => {
         audioWin.webContents.send('stopAudio')
     })
 
-    win.loadFile('home/home.html')
-    win.setMenu(null)
-
     audioWin.loadFile('home/audio.html')
     audioWin.setMenu(null)
-    audioWin.minimize()
+
+    win.loadFile('home/home.html')
+    win.setMenu(null)
 
     win.on('closed', () => {
         audioWin.close()
