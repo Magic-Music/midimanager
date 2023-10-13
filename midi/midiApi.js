@@ -60,7 +60,7 @@ const getProjectMidiChannels = (projectSlug) => {
 const getMidiOut = (projectSlug) => {
     if (!midiOut) {
         port = getCurrentPort(projectSlug)
-        midiOut = jzz().openMidiOut(port).or(function() {alert("Can't open port")})
+        midiOut = jzz().openMidiOut(port).or(function() {})//alert("Can't open port")})
         midiOut.wait(100)
     }
 

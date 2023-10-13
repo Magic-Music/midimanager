@@ -139,8 +139,9 @@ body {
 }
 
 .all-songs-table {
-    height: 75%;
+    height: 90%;
     margin: 8px 0px;
+    z-index: 1000;
 }
 
 .next-song-button {

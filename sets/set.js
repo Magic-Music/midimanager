@@ -26,7 +26,8 @@ function showSetSongs()
         columns: [
             {
                 title: "Song",
-                field: "song"
+                field: "song",
+                headerFilter: "input"
             },
             {
                 formatter: songIcon,
