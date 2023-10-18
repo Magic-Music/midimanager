@@ -60,7 +60,7 @@ const getProjectMidiChannels = (projectSlug) => {
 const getMidiOut = (projectSlug) => {
     if (!midiOut) {
         port = getCurrentPort(projectSlug)
-        midiOut = jzz().openMidiOut(port).or(function() {})//alert("Can't open port")})
+        midiOut = jzz().openMidiOut(port).or(function() {alert("Can't open port")})
         midiOut.wait(100)
     }
 
@@ -108,6 +108,13 @@ const disconnectMidiThru = () => {
     disconnect(midiIn)
 }
 
+const resetMidi = () =>
+{
+    disconnect(midiOut)
+    midiOut = null
+    alert("Midi reset")
+}
+
 const disconnect = (connection) => {
     if (typeof(connection) !== 'undefined') {
         connection.disconnect().close()
@@ -116,6 +123,7 @@ const disconnect = (connection) => {
 
 module.exports = {
     getPorts,
+    resetMidi,
     sendSongById,
     sendSongToMidi,
     connectMidiThru,

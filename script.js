@@ -12,6 +12,8 @@ const numbersOneKey         = keycodes.NUM1
 const playAudioKey          = keycodes.P
 const stopAudioKey          = keycodes.O
 const unlockAudioKey        = keycodes.SPACE
+const resetMidiKey          = keycodes.Z
+
 
 String.prototype.slugify = function (separator = "-") {
     return this
@@ -26,6 +28,10 @@ String.prototype.slugify = function (separator = "-") {
 
 function connectMidiThru() {
     window.midiApi.connectMidiThru(getQueryParam('project'))
+}
+
+function resetMidi() {
+    window.midiApi.resetMidi()
 }
 
 function el(id) {
