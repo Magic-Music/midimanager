@@ -79,7 +79,7 @@ body {
 .body-container {
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 82px);
     overflow: hidden;
     position: fixed;
 }
@@ -94,7 +94,7 @@ body {
 .setlist-container {
     width: 50vw;
     border-right: 2px solid #eeeeee;
-    height: calc(100% - 80px);
+    height: 100%;
     display: inline-block;
     float: left;
     overflow-y: hidden;
@@ -114,13 +114,14 @@ body {
 .info-container {
     display: inline-block;
     height: 80vh;
-    width: 42vw;
+    width: 48vw;
 }
 
 .song-info{
     font-size: 40px;
     text-align: left;
     height: 100%;
+    width: 100%;
 }
 
 .current-song {
@@ -196,10 +197,11 @@ body {
     font-style: italic;
     color: #d7c337;
     background-color: #5c1320;
-    width: 49vw;
+    width: 99%;
+    margin-left: 0.5%;
     display: block;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 10px;
     position: relative;
     top: 50%;
     transform: translate(0, -62%);
