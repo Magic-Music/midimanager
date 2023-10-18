@@ -69,6 +69,10 @@ function addListeners() {
         previousSong()
     })
 
+    addKeyPress(resetMidiKey, function () {
+        resetMidi()
+    })
+
     setPlayControls();
 }
 
@@ -82,7 +86,7 @@ function nextSong() {
     if (currentSong > 0) {
         el('song-' + currentSong).classList.remove('current-song')
     } else {
-        html('next-song', "Enter: Next song | Backspace: Previous song | Space: Extra song | Escape: Exit")
+        html('next-song', "Enter: Next song | Backspace: Previous song | #: Extra song | Z: Reset Midi | Esc: Exit")
     }
 
     currentSong++
